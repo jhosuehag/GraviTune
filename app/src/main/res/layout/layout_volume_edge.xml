@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!-- Handle View -->
+    <View
+        android:id="@+id/view_handle"
+        android:layout_width="30dp"
+        android:layout_height="74dp"
+        android:background="@drawable/bg_handle"
+        android:layout_gravity="center_vertical|start"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <!-- Volume Panel (Hidden initially) -->
+    <LinearLayout
+        android:id="@+id/layout_volume_panel"
+        android:layout_width="60dp"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_volume_panel"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_gravity="center_vertical|start"
+        android:layout_marginStart="12dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/btn_volume_up"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_volume_up"
+            android:contentDescription="Volume Up"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <!-- Slider Placeholder (SeekBar) -->
+        <SeekBar
+            android:id="@+id/seekbar_volume"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:rotation="270"
+            android:layout_weight="1"
+            android:progressTint="@android:color/white"
+            android:thumbTint="@android:color/white"
+            android:progressBackgroundTint="#80FFFFFF"/>
+
+        <ImageView
+            android:id="@+id/btn_volume_down"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_volume_down"
+            android:contentDescription="Volume Down"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"/>
+
+    </LinearLayout>
+
+</FrameLayout>
